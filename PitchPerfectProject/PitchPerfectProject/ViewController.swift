@@ -49,7 +49,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func recordButtonTapped(sender: AnyObject) {
+    }
 
+    @IBOutlet weak var stopButtontapped: UIButton!
   
 
 
