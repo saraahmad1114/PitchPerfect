@@ -42,6 +42,11 @@ class ViewController: UIViewController {
         stopButton.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor, multiplier: 0.10).active = true
  
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewDidLoad()
+        stopButton.enabled = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,11 +56,16 @@ class ViewController: UIViewController {
     @IBAction func recordButtonTapped(sender: AnyObject) {
         print("record button tapped")
         self.statusLabel.text = "Recording"
+        stopButton.enabled = true
+        recordButton.enabled = false
+        
     }
    
     @IBAction func stopButtonTapped(sender: AnyObject) {
         print("stop button tapped")
         self.statusLabel.text = "stopped Recording"
+        stopButton.enabled = false
+        recordButton.enabled = true 
     }
    
   
