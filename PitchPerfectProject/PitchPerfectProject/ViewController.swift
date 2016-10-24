@@ -10,44 +10,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var recordButtonOutlet: UIButton!
+    @IBOutlet weak var recordButton: UIButton!
+
+    @IBOutlet weak var statusLabel: UILabel!
+   
     
-    @IBOutlet weak var updateLabel: UILabel!
-    
-    @IBOutlet weak var stopRecordButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         view.removeConstraints(view.constraints)
+        recordButton.translatesAutoresizingMaskIntoConstraints = false
+        recordButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+        recordButton.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+        recordButton.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, multiplier: 0.30).active = true
+        recordButton.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor, multiplier: 0.10).active = true
         
-        //recordingButtonOutlet constraints
-        recordButtonOutlet.translatesAutoresizingMaskIntoConstraints = false
-        recordButtonOutlet.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-        recordButtonOutlet.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
-        recordButtonOutlet.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, multiplier: 0.50).active = true
-        recordButtonOutlet.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor, multiplier: 0.10).active = true
-     
         //updateLabel constraints
         //view.removeConstraints(self.updateLabel.constraints)
-        updateLabel.translatesAutoresizingMaskIntoConstraints = false
-        updateLabel.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-        updateLabel.topAnchor.constraintEqualToAnchor(self.recordButtonOutlet.bottomAnchor).active = true
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        statusLabel.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+        statusLabel.topAnchor.constraintEqualToAnchor(self.recordButton.bottomAnchor).active = true
+        statusLabel.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, multiplier: 0.15).active = true
         
         //stopRecordButton constraints
-        stopRecordButton.translatesAutoresizingMaskIntoConstraints = false
-        stopRecordButton.topAnchor.constraintEqualToAnchor(self.updateLabel.bottomAnchor).active = true
-        stopRecordButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-        stopRecordButton.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, multiplier: 0.50).active = true
-        stopRecordButton.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor, multiplier: 0.10).active = true 
-        
-        
-        
-        
-        
-        
-        
+        stopButton.translatesAutoresizingMaskIntoConstraints = false
+        stopButton.topAnchor.constraintEqualToAnchor(self.statusLabel.bottomAnchor).active = true
+        stopButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+        stopButton.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, multiplier: 0.20).active = true
+        stopButton.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor, multiplier: 0.10).active = true
+ 
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,12 +49,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func recordButtonTapped(sender: AnyObject) {
-        print("This button was tapped")
-    }
+
   
-    @IBAction func stopRecordButtonTapped(sender: AnyObject) {
-    }
+
 
 }
 

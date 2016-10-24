@@ -17,12 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Jc-fdJ">
-                                <rect key="frame" x="261" y="377" width="49" height="30"/>
-                                <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="recordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bid-St-iNy"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Jc-fdJ">
+                                <rect key="frame" x="207" y="342" width="158" height="100"/>
+                                <state key="normal" title="Record" image="recordButton"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nD-yg-dAL">
                                 <rect key="frame" x="256" y="443" width="50" height="21"/>
@@ -30,24 +27,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzw-5j-VHV">
-                                <rect key="frame" x="243" y="507" width="85" height="30"/>
-                                <state key="normal" title="Stop Record"/>
-                                <connections>
-                                    <action selector="stopRecordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdN-c8-HEW"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzw-5j-VHV">
+                                <rect key="frame" x="211" y="497" width="150" height="50"/>
+                                <state key="normal" title="Stop Record" image="stopButton"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="recordButtonOutlet" destination="ji1-Jc-fdJ" id="E7g-J8-9wI"/>
-                        <outlet property="stopRecordButton" destination="uzw-5j-VHV" id="Clh-do-siO"/>
-                        <outlet property="updateLabel" destination="8nD-yg-dAL" id="0e7-eb-Lp4"/>
+                        <outlet property="recordButton" destination="ji1-Jc-fdJ" id="L2q-cb-RCr"/>
+                        <outlet property="statusLabel" destination="8nD-yg-dAL" id="KEc-ch-5nC"/>
+                        <outlet property="stopButton" destination="uzw-5j-VHV" id="2hX-aD-OIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="recordButton" width="100" height="100"/>
+        <image name="stopButton" width="50" height="50"/>
+    </resources>
 </document>
