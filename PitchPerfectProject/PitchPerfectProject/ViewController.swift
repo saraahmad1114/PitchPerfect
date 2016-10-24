@@ -14,7 +14,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var statusLabel: UILabel!
    
-    
     @IBOutlet weak var stopButton: UIButton!
     
     override func viewDidLoad() {
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
         statusLabel.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
         statusLabel.topAnchor.constraintEqualToAnchor(self.recordButton.bottomAnchor).active = true
-        statusLabel.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, multiplier: 0.15).active = true
+        statusLabel.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, multiplier: 0.18).active = true
         
         //stopRecordButton constraints
         stopButton.translatesAutoresizingMaskIntoConstraints = false
@@ -50,9 +49,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func recordButtonTapped(sender: AnyObject) {
+        print("record button tapped")
+        self.statusLabel.text = "Recording"
     }
-
-    @IBOutlet weak var stopButtontapped: UIButton!
+   
+    @IBAction func stopButtonTapped(sender: AnyObject) {
+        print("stop button tapped")
+        self.statusLabel.text = "stopped Recording"
+    }
+   
   
 
 
